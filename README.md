@@ -60,9 +60,6 @@ Full breakdown, facilitator scripts, mentor notes, and emergency fixes are in **
 | **[`dev_setup`](./dev_setup)** | Stellar testnet setup, contract addresses, SDK patterns, and the critical gotchas that waste build time. |
 | **[`Starter_prompts.md`](./Starter_prompts.md)** | How to prompt AI for a Stellar build — context blocks, wallet-vs-app framing, `CLAUDE.md` template, corrective prompts. |
 | **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** | Free and low-cost AI setup paths — OpenRouter, Groq, Google AI Studio, Ollama, cheap GPU rental. |
-| **[`Recommended_AI_Tools.md`](./Recommended_AI_Tools)** | Which AI tools to use — Stellar-native tools, coding assistants, rapid prototyping. |
-| **[`Claude_code_Guide.md`](./Claude_code_Guide.md)** | Building faster with Claude Code — plan mode, parallel agents, browser-based testing. |
-| **[`Resources`](./Resources)** | Stellar ecosystem links, reference implementations, and Philippines builder context. |
 
 ### Going further (after the workshop)
 | File | What it is |

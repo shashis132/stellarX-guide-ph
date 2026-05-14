@@ -31,10 +31,7 @@ Use an AI coding assistant to do the typing and fix errors for you. This is the 
 |---|---|
 | The right way to prompt AI for a Stellar build | `Starter_prompts.md` |
 | A free AI setup (no paid subscription) | `Free_AI_Setup.md` |
-| Which AI tools to use | `Recommended_AI_Tools.md` |
-| Plan mode, parallel agents, browser testing | `Claude_code_Guide.md` |
 | Testnet addresses, gotchas, deeper setup | `dev_setup` |
-| Ecosystem links and reference projects | `Resources` |
 | 300 ideas for what to actually build | `stellar-300-ideas.md` |
 
 **Tip:** Ask the AI to read `dev_setup` and `Starter_prompts.md` from this repo first — it will then know all the Stellar gotchas before it writes a line.
@@ -812,6 +809,99 @@ Build the smallest strong demo-ready version. Core flow only. No dashboard extra
 
 ---
 
+## AI Tools Quick Reference
+
+### Stellar-Native Tools (start here)
+
+| Tool | What it does | Where |
+|---|---|---|
+| **Stella** | Official Stellar AI assistant — ask it anything Stellar-specific | https://developers.stellar.org (chat icon) |
+| **stellar-dev skill** | Claude Code skill for Soroban, SDKs, wallet integration, pitfalls | Type `stellar-dev:stellar-dev` in Claude Code |
+| **llms.txt** | Machine-readable Stellar docs for feeding into AI workflows | https://developers.stellar.org/llms.txt |
+| **OpenZeppelin skills** | Secure Soroban contract development + MCP support | `/plugin marketplace add OpenZeppelin/openzeppelin-skills` |
+| **Scaffold Stellar** | CLI for app lifecycle, contracts, testing, deployment | https://scaffoldstellar.org |
+| **Smart Account Kit** | TypeScript SDK for passkey smart wallets on Soroban | https://github.com/kalepail/smart-account-kit |
+| **Stellar MCP Server** | MCP server exposing wallet, token, contract tools to AI | https://github.com/kalepail/stellar-mcp-server |
+| **x402** | Per-request HTTP payment protocol for AI agents | https://developers.stellar.org/docs/build/apps/x402 |
+
+### Coding Assistants
+
+| Tool | Free? | Best for |
+|---|---|---|
+| **Claude Code** | Paid (free with local model) | Structured builds, plan mode, parallel agents |
+| **Cursor** | Free tier | Fast in-IDE assistance |
+| **Continue** | Free | VS Code / JetBrains with local models |
+| **Aider** | Free | Terminal + Git-based workflows |
+| **Google AI Studio** | Free | Large-context planning and debugging |
+| **Bolt.new / v0** | Free tier | Quick UI scaffolding from prompts |
+
+**No paid subscription?** See `Free_AI_Setup.md` for free paths (OpenRouter, Groq, Ollama, Groq).
+
+### Claude Code Essentials
+
+**Start every session with plan mode** (`/plan` or `Shift+Tab`) before writing any code. It prevents wasted time on the wrong architecture.
+
+**Create a `CLAUDE.md`** at your repo root — Claude Code reads it automatically. Put your stack, network config, and testnet addresses there so you never repeat yourself.
+
+**Useful commands:**
+
+| Command | What it does |
+|---|---|
+| `/plan` | Reason before acting — no code written |
+| `/compact` | Compress conversation, keep working context |
+| `/clear` | Start fresh for a new task |
+| `/model` | Switch models mid-session |
+| `Shift+Tab` | Toggle plan mode |
+| `Escape` | Interrupt current operation |
+
+**Parallel agents pattern** (for teams with 3+ features to build simultaneously):
+
+```text
+Once scaffold is ready, divide work into 3 independent tracks:
+Track 1: Core logic + tests
+Track 2: State management + routing  
+Track 3: UI components
+Spawn one agent per track. Then wire together in a 4th integration pass.
+```
+
+Only parallelize after the project structure is stable — conflicts multiply without a shared blueprint.
+
+---
+
+## Ecosystem Resources & Reference Repos
+
+### Reference Implementations
+
+| Repo | What it demonstrates |
+|---|---|
+| https://github.com/kaankacar/stellar-defi-app | Blend, Soroswap, Phoenix, Aquarius, Reflector — all together |
+| https://github.com/carstenjacobsen/ai-freighter-integration | Wallet connection, balances, payments, tx history |
+| https://github.com/carstenjacobsen/ai-soroswap-integration | Multi-DEX swap routing |
+| https://github.com/carstenjacobsen/ai-passkeys-integration | Passkey wallet patterns |
+| https://github.com/briwylde08/stellar-hackathon-faq | Community FAQ for Stellar builders |
+| https://github.com/kaankacar/stellar-defi-gotchas | Protocol-specific pitfalls and integration issues |
+
+### Ecosystem Discovery
+
+| Resource | Link |
+|---|---|
+| Stellar Developer Docs | https://developers.stellar.org |
+| Stellar Anchor Directory | https://anchors.stellar.org |
+| Stellar Ecosystem Resources | https://github.com/stellar/ecosystem-resources/ |
+| Stellar Ecosystem DB | https://github.com/lumenloop/stellar-ecosystem-db |
+| Stellar Laboratory (testnet tool) | https://laboratory.stellar.org |
+| Stellar Expert (explorer) | https://stellar.expert/explorer/testnet |
+
+### Videos Worth Watching
+
+| Title | Link |
+|---|---|
+| Scoping and Evaluating Your Project | https://x.com/BuildOnStellar/status/2029288908639666402 |
+| The Builder's Guide to AI Prompt Engineering | https://x.com/BuildOnStellar/status/2008902190090613013 |
+| Vibe Coding 5 ZK Games in 90 Minutes | https://x.com/i/broadcasts/1dRKZaYYbbdxB |
+
+---
+
 ## What to Build Next (Beyond 90 Minutes)
 
 Once the core payment flow works, extend it with:
@@ -829,4 +919,4 @@ Once the core payment flow works, extend it with:
 
 ---
 
-*Built for StellarX Philippines. Reference: `Starter_prompts.md`, `dev_setup`, `Resources`, `Claude_code_Guide.md`*
+*Built for StellarX Philippines. Reference: `Starter_prompts.md`, `dev_setup`, `stellar-300-ideas.md`*
