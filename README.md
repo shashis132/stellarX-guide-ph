@@ -32,6 +32,17 @@ Five minutes there can save hours later.
 
 If you want to understand the broader ecosystem and available building blocks, read **`Hackathon_Resources_PH.md`**. It will help you orient yourself around Stellar, useful integrations, example projects, and the kinds of products that make sense for the Philippines.
 
+## Competing in the hackathon?
+
+If you are here to compete in StellarX Philippines, start with **`HACKATHON.md`** — it is the hub for everything competition-related:
+
+- **`HACKATHON.md`** — hackathon overview and quick links
+- **`TRACKS.md`** — the 6 tracks, mapped directly to the 300-ideas categories
+- **`JUDGING.md`** — how projects are scored (6 criteria, 100 points, bonus points)
+- **`SUBMISSION_GUIDELINES.md`** — exactly what and how to submit
+- **`stellar-300-ideas.md`** — 300 build ideas to pick from
+- **`stellar-fullstack-cheatsheet.md`** — go from zero to a working app in 90 minutes
+
 ## Suggested reading order
 
 1. **`Starter_Prompts.md`** — before your first Claude Code session  
