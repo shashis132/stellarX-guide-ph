@@ -23,11 +23,13 @@ The workshop is built for the Philippines context — remittance, payments, and 
 | Block | Time | What happens |
 |---|---|---|
 | **1. Learn Stellar** | 60 min | Core concepts, the developer stack, product patterns — with live demos |
-| **Break** | 15 min | Coffee, form teams, finish environment setup |
-| **2. Build** | 90 min | Hands-on: build a working Stellar payment app on testnet |
-| **3. Demo & Reflect** | 15 min | Teams demo, group reflection, what's next |
+| **Break** | 15 min | Coffee, form teams, **pick an idea and a track**, finish environment setup |
+| **2. Build** | 90 min | Hands-on: build your chosen idea on testnet, using the cheatsheet as the scaffold |
+| **3. Demo & Submit** | 15 min | Teams demo, **submit their project**, group reflection, what's next |
 
 Full breakdown, facilitator scripts, mentor notes, and emergency fixes are in **[`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md)**.
+
+**Whatever you build in the 90-minute block is what you submit.** You pick an idea from [`stellar-300-ideas.md`](./stellar-300-ideas.md), choose a [track](./TRACKS.md), build it on the cheatsheet scaffold, and submit it per [`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md) before the workshop ends.
 
 ---
 
@@ -35,14 +37,18 @@ Full breakdown, facilitator scripts, mentor notes, and emergency fixes are in **
 
 ### If you are a participant (building in the workshop)
 1. **[`dev_setup`](./dev_setup)** — get your environment ready *before* the build block. Five minutes here saves hours.
-2. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — the step-by-step guide you follow during the 90-minute build. Every step has exact code.
-3. **[`Starter_prompts.md`](./Starter_prompts.md)** — how to prompt AI correctly if you build with an AI assistant.
-4. **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** — no paid AI subscription? Free and low-cost ways to get a strong coding model.
+2. **[`stellar-300-ideas.md`](./stellar-300-ideas.md)** — browse this *before* the workshop and shortlist what you might build. You pick your idea at the break.
+3. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — the step-by-step scaffold you follow during the 90-minute build. Every step has exact code.
+4. **[`Starter_prompts.md`](./Starter_prompts.md)** — how to prompt AI correctly if you build with an AI assistant.
+5. **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** — no paid AI subscription? Free and low-cost ways to get a strong coding model.
+6. **[`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md)** — how to submit what you build. Read this so you know the target before you start.
 
 ### If you are a facilitator (running the workshop)
 1. **[`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md)** — your minute-by-minute run-of-show, including the pre-workshop checklist, live-demo scripts, mentor talking points, and emergency fixes.
-2. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — what participants build in Block 2. Know it well.
-3. **[`dev_setup`](./dev_setup)** — the gotchas you should warn participants about before they hit them.
+2. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — the scaffold participants build on in Block 2. Know it well.
+3. **[`stellar-300-ideas.md`](./stellar-300-ideas.md)** / **[`TRACKS.md`](./TRACKS.md)** — what participants pick from at the break. Help them scope tight.
+4. **[`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md)** / **[`JUDGING.md`](./JUDGING.md)** — how projects get submitted and scored. Run the submission step in Block 3.
+5. **[`dev_setup`](./dev_setup)** — the gotchas you should warn participants about before they hit them.
 
 ---
 
@@ -61,27 +67,27 @@ Full breakdown, facilitator scripts, mentor notes, and emergency fixes are in **
 | **[`Starter_prompts.md`](./Starter_prompts.md)** | How to prompt AI for a Stellar build — context blocks, wallet-vs-app framing, `CLAUDE.md` template, corrective prompts. |
 | **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** | Free and low-cost AI setup paths — OpenRouter, Groq, Google AI Studio, Ollama, cheap GPU rental. |
 
-### Going further (after the workshop)
+### Pick, build, submit (used during the workshop)
 | File | What it is |
 |---|---|
-| **[`stellar-300-ideas.md`](./stellar-300-ideas.md)** | 300 build ideas across 13 categories, cross-checked against 8,000+ existing Stellar repos for novelty. |
-| **[`HACKATHON.md`](./HACKATHON.md)** | Hackathon hub — for teams taking their workshop project into a competition. |
-| **[`TRACKS.md`](./TRACKS.md)** | 6 hackathon tracks, mapped to the 300-ideas categories. |
-| **[`JUDGING.md`](./JUDGING.md)** | Hackathon judging rubric — 6 criteria, 100 points, bonus points. |
-| **[`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md)** | How to submit a hackathon project. |
-| `stellar_repos.txt` / `stellar.jsonl` / `stellar_repos.csv` / `stellar_breakdown.txt` | The Stellar ecosystem repo export used to novelty-check the 300 ideas. |
+| **[`stellar-300-ideas.md`](./stellar-300-ideas.md)** | 300 build ideas across 13 categories, cross-checked against 8,000+ existing Stellar repos for novelty. **You pick your build idea from here at the break.** |
+| **[`TRACKS.md`](./TRACKS.md)** | 6 tracks, mapped to the 300-ideas categories. You choose one track for your submission. |
+| **[`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md)** | How to submit what you build — submission happens in Block 3, before the workshop ends. |
+| **[`JUDGING.md`](./JUDGING.md)** | The rubric your submission is scored against — 6 criteria, 100 points, bonus points. |
+| **[`HACKATHON.md`](./HACKATHON.md)** | Hackathon hub — for teams taking their workshop project further into a competition. |
+| `stellar_repos.txt` / `stellar.jsonl` / `stellar_repos.csv` / `stellar_breakdown.txt` | The Stellar ecosystem repo export used to novelty-check the 300 ideas — search it to confirm your idea is fresh. |
 
 ---
 
 ## What You Build in the Workshop
 
-A fullstack Stellar **payment app** running on testnet that can:
-- Connect a wallet
-- Show XLM and USDC balances
-- Send a payment to any Stellar address
-- Poll for transaction finality and show the result
+**You build your chosen idea — and submit it.** The flow:
 
-It is intentionally small — the goal is a **strong working demo of a core flow**, not a finished product. The cheatsheet gets you there in 90 minutes with exact, copy-paste code at every step.
+1. **Pick an idea** from [`stellar-300-ideas.md`](./stellar-300-ideas.md) and a [track](./TRACKS.md) at the break.
+2. **Build it** in the 90-minute block. The [cheatsheet](./stellar-fullstack-cheatsheet.md) gives you a working scaffold — a fullstack testnet app that connects a wallet, shows XLM/USDC balances, sends a payment, and polls for finality. You bend that scaffold toward your idea.
+3. **Submit it** in Block 3 per [`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md), scored against [`JUDGING.md`](./JUDGING.md).
+
+Keep scope tight — the goal is a **strong working demo of one core flow**, not a finished product. The cheatsheet gets you to a running app fast with exact, copy-paste code so your remaining time goes into the part that makes your idea *yours*.
 
 ---
 
