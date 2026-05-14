@@ -1,6 +1,43 @@
 # Stellar Fullstack App — 90-Minute Cheatsheet
 
 > Build a working Stellar payment app from zero to demo-ready in 90 minutes. Every step is timed. Follow in order. Skip nothing in the first pass.
+>
+> **You do not need to be an expert.** If you can copy, paste, and run a command, you can finish this. Every step has the exact code you need. If you get stuck, use AI (see below) — that is the intended way to do this.
+
+---
+
+## The Easiest Way to Do This (read first — 2 min)
+
+You have two ways to work through this cheatsheet. Both reach the same finish line.
+
+### Path A — Copy-paste (no AI needed)
+Every step below gives you the **exact code and exact commands**. Create the file at the path shown, paste the code, move on. That is the whole job. You never have to write code from scratch.
+
+### Path B — AI-assisted (recommended if anything breaks)
+Use an AI coding assistant to do the typing and fix errors for you. This is the **intended** way — it is faster and you will get unstuck quickly.
+
+**How to use AI with this cheatsheet:**
+1. Open an AI coding tool — **Claude Code**, **Cursor**, or a free option.
+2. Tell it: *"I'm following a 90-minute cheatsheet to build a Stellar payment app. Here is Step 1: [paste the step]. Do this step for me."*
+3. When something breaks, paste the **exact error message** and ask: *"Fix this. I'm on Stellar testnet using @stellar/stellar-sdk v14."*
+4. Use the ready-made prompt at the bottom of this file ("Starter AI Prompt for Claude Code") to kick things off.
+
+**No paid AI subscription?** This repo has you covered:
+- `Free_AI_Setup.md` — free and low-cost ways to get a strong coding model (OpenRouter, Groq, Google AI Studio, Ollama for local models, cheap GPU rental).
+- `Recommended_AI_Tools.md` — which AI tool to pick and why.
+
+### This repo has more help — use it
+| If you want... | Open this file |
+|---|---|
+| The right way to prompt AI for a Stellar build | `Starter_prompts.md` |
+| A free AI setup (no paid subscription) | `Free_AI_Setup.md` |
+| Which AI tools to use | `Recommended_AI_Tools.md` |
+| Plan mode, parallel agents, browser testing | `Claude_code_Guide.md` |
+| Testnet addresses, gotchas, deeper setup | `dev_setup` |
+| Ecosystem links and reference projects | `Resources` |
+| 300 ideas for what to actually build | `stellar-300-ideas.md` |
+
+**Tip:** Ask the AI to read `dev_setup` and `Starter_prompts.md` from this repo first — it will then know all the Stellar gotchas before it writes a line.
 
 ---
 
@@ -761,7 +798,7 @@ Build the smallest strong demo-ready version. Core flow only. No dashboard extra
 
 | Step | Task | Time |
 |---|---|---|
-| 0 | Read this cheatsheet, choose wallet pattern | 5 min |
+| 0 | Read "The Easiest Way" + this cheatsheet, choose wallet pattern, open your AI tool | 5 min |
 | 1 | Environment setup, SDK install, config | 10 min |
 | 2 | Wallet connection (Freighter hook + component) | 15 min |
 | 3 | Balance display | 10 min |
@@ -770,6 +807,8 @@ Build the smallest strong demo-ready version. Core flow only. No dashboard extra
 | 6 | Run, test, fix issues | 10 min |
 | 7 | Polish: empty states, error messages, tx history | 10 min |
 | **Total** | | **90 min** |
+
+> **Falling behind?** That is normal. Hand the step you are on to your AI tool with the instruction *"do this step for me"* and let it catch you up. The goal is a working demo of the core flow — not typing every character yourself.
 
 ---
 
