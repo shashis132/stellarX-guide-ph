@@ -1,193 +1,109 @@
-# StellarX Philippines — Developer Guide
+# StellarX Philippines — 3-Hour Stellar Workshop
 
-The Philippines is one of the most important markets in the world for real crypto utility.
+A complete, ready-to-run **3-hour workshop** that takes developers from "what is Stellar?" to a working fullstack Stellar app deployed on testnet.
 
-It has one of the largest remittance corridors globally, a deeply digital consumer base, widespread e-wallet adoption, and millions of users who still face slow, expensive, or limited financial access. Stellar is built for exactly these kinds of use cases — payments, remittance, wallet-led financial products, and consumer crypto experiences that can work in the real world.
+> **60 minutes learning Stellar → 90 minutes building → 15 minutes demo & reflect.**
 
-This repo is a collection of guides put together to help builders in **StellarX Philippines** move fast.
+---
 
-The goal is simple: every developer in this program should have a fair shot at building something real, regardless of whether they have:
-- a paid AI subscription
-- years of Stellar experience
-- or a high-end machine
+## What This Is
 
-This repo is here to reduce friction, shorten time-to-launch, and help teams go from **idea → prototype → demo-ready build** as quickly as possible.
+This repo is everything you need to **run or attend** a 3-hour Stellar developer workshop:
 
-## Start here
+- A minute-by-minute **facilitator plan** for the full 3 hours
+- A step-by-step **build cheatsheet** for the 90-minute hands-on block
+- The **setup, AI, and reference material** the workshop depends on
 
-If you are about to open Claude Code or start planning your build for the first time, begin with **`Starter_Prompts.md`**.
+The workshop is built for the Philippines context — remittance, payments, and financial inclusion — but the technical content applies to building on Stellar anywhere.
 
-It helps you avoid one of the most common hackathon mistakes: asking AI to build the wrong kind of product because your prompt was too vague.
+---
 
-It includes:
-- a ready-to-use protocol context block
-- the right way to describe whether you are building a wallet, app, or integration flow
-- a `CLAUDE.md` template for Stellar projects
-- quick prompt corrections when the model goes off track
+## The 3 Hours at a Glance
 
-If you do **not** have a paid AI subscription, start with **`Free_AI_Setup.md`**. It covers free and low-cost ways to access strong coding models, including OpenRouter, Groq, Mistral, Google AI Studio, Ollama, and cheap GPU rental options.
+| Block | Time | What happens |
+|---|---|---|
+| **1. Learn Stellar** | 60 min | Core concepts, the developer stack, product patterns — with live demos |
+| **Break** | 15 min | Coffee, form teams, finish environment setup |
+| **2. Build** | 90 min | Hands-on: build a working Stellar payment app on testnet |
+| **3. Demo & Reflect** | 15 min | Teams demo, group reflection, what's next |
 
-Before writing any code, read **`Dev_Setup_Guide_PH.md`** first.  
-Five minutes there can save hours later.
+Full breakdown, facilitator scripts, mentor notes, and emergency fixes are in **[`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md)**.
 
-If you want to understand the broader ecosystem and available building blocks, read **`Hackathon_Resources_PH.md`**. It will help you orient yourself around Stellar, useful integrations, example projects, and the kinds of products that make sense for the Philippines.
+---
 
-## Competing in the hackathon?
+## Start Here
 
-If you are here to compete in StellarX Philippines, start with **`HACKATHON.md`** — it is the hub for everything competition-related:
+### If you are a participant (building in the workshop)
+1. **[`dev_setup`](./dev_setup)** — get your environment ready *before* the build block. Five minutes here saves hours.
+2. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — the step-by-step guide you follow during the 90-minute build. Every step has exact code.
+3. **[`Starter_prompts.md`](./Starter_prompts.md)** — how to prompt AI correctly if you build with an AI assistant.
+4. **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** — no paid AI subscription? Free and low-cost ways to get a strong coding model.
 
-- **`HACKATHON.md`** — hackathon overview and quick links
-- **`TRACKS.md`** — the 6 tracks, mapped directly to the 300-ideas categories
-- **`JUDGING.md`** — how projects are scored (6 criteria, 100 points, bonus points)
-- **`SUBMISSION_GUIDELINES.md`** — exactly what and how to submit
-- **`stellar-300-ideas.md`** — 300 build ideas to pick from
-- **`stellar-fullstack-cheatsheet.md`** — go from zero to a working app in 90 minutes
+### If you are a facilitator (running the workshop)
+1. **[`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md)** — your minute-by-minute run-of-show, including the pre-workshop checklist, live-demo scripts, mentor talking points, and emergency fixes.
+2. **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** — what participants build in Block 2. Know it well.
+3. **[`dev_setup`](./dev_setup)** — the gotchas you should warn participants about before they hit them.
 
-## Suggested reading order
+---
 
-1. **`Starter_Prompts.md`** — before your first Claude Code session  
-2. **`Free_AI_Setup.md`** — if you need a free AI setup  
-3. **`Dev_Setup_Guide_PH.md`** — before writing any code  
-4. **`Hackathon_Resources_PH.md`** — to orient yourself in the Stellar ecosystem and PH-specific opportunity areas  
-5. **`Claude_Code_Guide.md`** — for commands, parallel agents, and browser automation  
-6. **`Recommended_AI_Tools.md`** — to explore other useful tools  
+## Repo Map
 
-## What this repo is optimized for
+### Core workshop files
+| File | What it is |
+|---|---|
+| **[`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md)** | The full 3-hour facilitator plan: learn block, build block, demo block, plus adaptations for 2hr / 4hr / beginner / advanced formats. |
+| **[`stellar-fullstack-cheatsheet.md`](./stellar-fullstack-cheatsheet.md)** | Step-by-step 90-minute build guide for a Stellar payment app — full code, gotchas, testnet reference, AI-assisted path. |
 
-This guide is designed to help teams building products relevant to the Philippines, especially around:
+### Supporting material (the workshop and cheatsheet depend on these)
+| File | What it is |
+|---|---|
+| **[`dev_setup`](./dev_setup)** | Stellar testnet setup, contract addresses, SDK patterns, and the critical gotchas that waste build time. |
+| **[`Starter_prompts.md`](./Starter_prompts.md)** | How to prompt AI for a Stellar build — context blocks, wallet-vs-app framing, `CLAUDE.md` template, corrective prompts. |
+| **[`Free_AI_Setup.md`](./Free_AI_Setup.md)** | Free and low-cost AI setup paths — OpenRouter, Groq, Google AI Studio, Ollama, cheap GPU rental. |
+| **[`Recommended_AI_Tools.md`](./Recommended_AI_Tools)** | Which AI tools to use — Stellar-native tools, coding assistants, rapid prototyping. |
+| **[`Claude_code_Guide.md`](./Claude_code_Guide.md)** | Building faster with Claude Code — plan mode, parallel agents, browser-based testing. |
+| **[`Resources`](./Resources)** | Stellar ecosystem links, reference implementations, and Philippines builder context. |
 
-- wallets
-- payments
-- remittance
-- savings
-- DeFi access
-- stablecoin-powered experiences
-- underbanked and consumer financial products
+### Going further (after the workshop)
+| File | What it is |
+|---|---|
+| **[`stellar-300-ideas.md`](./stellar-300-ideas.md)** | 300 build ideas across 13 categories, cross-checked against 8,000+ existing Stellar repos for novelty. |
+| **[`HACKATHON.md`](./HACKATHON.md)** | Hackathon hub — for teams taking their workshop project into a competition. |
+| **[`TRACKS.md`](./TRACKS.md)** | 6 hackathon tracks, mapped to the 300-ideas categories. |
+| **[`JUDGING.md`](./JUDGING.md)** | Hackathon judging rubric — 6 criteria, 100 points, bonus points. |
+| **[`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md)** | How to submit a hackathon project. |
+| `stellar_repos.txt` / `stellar.jsonl` / `stellar_repos.csv` / `stellar_breakdown.txt` | The Stellar ecosystem repo export used to novelty-check the 300 ideas. |
 
-The strongest StellarX projects will likely be the ones that combine:
-- real local demand
-- strong product thinking
-- meaningful use of Stellar
-- fast execution
+---
 
-This repo is meant to help you get there faster.
+## What You Build in the Workshop
 
-## About the files
+A fullstack Stellar **payment app** running on testnet that can:
+- Connect a wallet
+- Show XLM and USDC balances
+- Send a payment to any Stellar address
+- Poll for transaction finality and show the result
 
-### `Starter_Prompts.md`
-The fastest way to avoid common AI-assisted build mistakes.
+It is intentionally small — the goal is a **strong working demo of a core flow**, not a finished product. The cheatsheet gets you there in 90 minutes with exact, copy-paste code at every step.
 
-This is especially useful if you are using Claude Code and want it to scaffold the right architecture from the start.
+---
 
-It includes:
-- wallet vs app prompt framing
-- protocol context block
-- parallel agent prompt template
-- `CLAUDE.md` starter structure
-- quick corrective prompts
+## Requirements
 
-### `Dev_Setup_Guide_PH.md`
-Everything you should know before writing code for StellarX Philippines.
+**Participants need:**
+- Node.js 18+ and `npm`
+- A browser (Chrome preferred)
+- A code editor
+- An AI coding assistant — paid or free (see [`Free_AI_Setup.md`](./Free_AI_Setup.md))
 
-This file should help you avoid the usual time sinks:
-- wrong network / wrong asset assumptions
-- broken transaction flow
-- missing simulation step
-- anchor / payment integration confusion
-- testnet gotchas
-- PH-specific integration blockers
+**Facilitators need:** see the pre-workshop checklist at the top of [`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md).
 
-This is the file to read before you start implementation.
+---
 
-### `Hackathon_Resources_PH.md`
-Your regional builder starter pack.
+## Adapting the Workshop
 
-This is where you should go to understand:
-- what already exists in Stellar
-- what reference implementations are useful
-- what integrations or protocols might be relevant
-- what kinds of PH-specific product ideas make sense
-- what ecosystem resources can save you time
+The workshop plan includes appendices for running it as a **2-hour** or **4-hour** session, and for **beginner** (no-code, demo-along) or **advanced** (skip basics, go deeper on Soroban) audiences. See the appendix in [`stellar-workshop-3hr-plan.md`](./stellar-workshop-3hr-plan.md).
 
-### `Claude_Code_Guide.md`
-A practical guide for building faster with Claude Code.
+---
 
-It covers:
-- plan mode
-- parallel agent workflows
-- `CLAUDE.md`
-- browser-based testing
-- Stellar-specific workflow patterns
-
-If you are using Claude seriously during StellarX, this will likely save you a lot of time.
-
-### `Recommended_AI_Tools.md`
-A broader list of tools that can help you move faster as a builder.
-
-This includes:
-- Stellar-native AI/dev tools
-- coding assistants
-- rapid prototyping tools
-- multi-agent frameworks
-- useful resources for AI-native products
-
-### `Free_AI_Setup.md`
-Free and low-cost AI setup paths for builders.
-
-Use this if:
-- you don’t have Claude Pro / Cursor Pro / paid credits
-- you want free API options
-- you want to run models locally
-- you need a cheap GPU setup for the hackathon period
-
-## How to use this repo properly
-
-The best way to use this repo is:
-
-### 1. Decide what you are building
-Be clear whether you are building:
-- a wallet
-- a payment app
-- a remittance flow
-- a DeFi product
-- a consumer finance experience
-
-### 2. Read the setup guides before coding
-Do not start with code if you do not understand:
-- what Stellar pieces you need
-- what product flow you are building
-- which assets / protocols / integrations are relevant
-
-### 3. Use AI intentionally
-AI is here to help you move faster, not make architecture choices for you blindly.
-
-Good prompting + clear structure = much better results.
-
-### 4. Optimize for demo-ready execution
-The goal is not to build everything.  
-The goal is to build the strongest version of the core flow you want to show.
-
-## What kind of projects will stand out
-
-Projects are more likely to stand out in StellarX Philippines if they:
-- solve a real problem relevant to the Philippines
-- demonstrate clear use of Stellar
-- have a working prototype or testnet-ready implementation
-- feel usable, not just conceptual
-- show strong execution and clarity
-
-A rough but useful product tied to real market demand is better than an over-ambitious idea with no usable flow.
-
-## Final note
-
-This repo is here to help you build faster and smarter.
-
-Use it to:
-- shorten time spent on setup
-- avoid predictable mistakes
-- get the right product structure early
-- and spend more time actually shipping
-
-If you are serious about building for StellarX Philippines, start with the prompts, understand the setup, and move quickly.
-
-**Build fast. Launch bigger.**
+*Build fast. Launch bigger.*
