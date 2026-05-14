@@ -9,10 +9,12 @@
 | Block | Duration | What happens |
 |---|---|---|
 | Block 1: Learn Stellar | 60 min | Concepts, architecture, live demos |
-| Break | 15 min | Coffee, questions, group into teams |
-| Block 2: Build | 90 min | Hands-on build using the 90-min cheatsheet |
-| Block 3: Present & Reflect | 15 min | Each team demos, lessons learned |
+| Break | 15 min | Coffee, questions, group into teams, pick an idea + track |
+| Block 2: Build | 90 min | Hands-on build of the team's chosen idea, on the cheatsheet scaffold |
+| Block 3: Demo & Submit | 15 min | Each team demos, submits their project, lessons learned |
 | **Total** | **~3 hours** | |
+
+> **The workshop ends in a submission.** Each team picks an idea from `stellar-300-ideas.md` and a track from `TRACKS.md` at the break, builds it during Block 2 using `stellar-fullstack-cheatsheet.md` as the scaffold, and submits it in Block 3 per `SUBMISSION_GUIDELINES.md`. Whatever the team has built at the end of Block 2 is what gets submitted.
 
 ---
 
@@ -28,6 +30,8 @@ Do these **before the room fills up**:
 - [ ] Verify that `https://friendbot.stellar.org` is reachable on the network
 - [ ] Ensure at least one mentor has Freighter installed and an account ready
 - [ ] Print or share the `stellar-fullstack-cheatsheet.md` link with all attendees
+- [ ] Share `stellar-300-ideas.md`, `TRACKS.md`, and `SUBMISSION_GUIDELINES.md` links — attendees should skim ideas before the break
+- [ ] Confirm the submission channel is open (the GitHub repo's Issues tab — see `SUBMISSION_GUIDELINES.md`)
 - [ ] Have Node.js 18+ install instructions ready as a backup slide
 
 ---
@@ -306,9 +310,11 @@ Open the floor for questions. Common ones:
 Organizer actions during break:
 - [ ] Share the cheatsheet file/link in the group chat
 - [ ] Ask people to form teams of 2–3 if going team-based
+- [ ] **Have every team pick an idea from `stellar-300-ideas.md` and a track from `TRACKS.md`** — this is what they build and submit
+- [ ] Tell teams to scope tight: the smallest strong demo of their idea, not the whole product
 - [ ] Install Freighter and create a testnet account if anyone hasn't already
 - [ ] Confirm everyone has Node.js installed
-- [ ] Circulate and answer quick questions
+- [ ] Circulate and answer quick questions — help teams that are stuck choosing an idea
 
 Slide/screen to show during break:
 ```
@@ -317,13 +323,21 @@ While you take a break:
 2. Switch Freighter to Testnet mode (Settings → Network → Testnet)
 3. Create or import an account
 4. You'll fund it via Friendbot in the build session
+
+Pick what you'll build:
+5. Open stellar-300-ideas.md — pick ONE idea
+6. Open TRACKS.md — pick the track it fits
+7. Scope it down: what is the smallest version you can demo in 90 min?
+   That scoped-down version is what you submit at the end.
 ```
+
+**Facilitator note on idea selection:** Teams that can't decide should default to a Track 1 (Remittance) or Track 2 (Payments) idea — these map most directly onto the cheatsheet scaffold. The cheatsheet builds a wallet + payment flow; most ideas are a variation or extension of that. Steer teams away from anything needing a Soroban contract written from scratch in 90 minutes.
 
 ---
 
 ## Block 2: Build — 90 Minutes
 
-> Participants follow the `stellar-fullstack-cheatsheet.md` step by step. Mentors circulate and help with blockers.
+> Participants follow the `stellar-fullstack-cheatsheet.md` step by step to get a working scaffold, then bend it toward the idea they picked at the break. Mentors circulate and help with blockers. Whatever a team has at 1:30 is what they submit.
 
 ---
 
@@ -336,7 +350,9 @@ While you take a break:
 - Create `.env.local` with testnet config from the cheatsheet
 
 **Facilitator script:**
-> "You have 90 minutes. By the end of it, you will have a working app that can connect a wallet, show balances, and send a payment on the Stellar testnet. We're going to build it step by step. Follow the cheatsheet. If you get stuck, raise your hand — that's what the mentors are here for."
+> "You have 90 minutes. By the end of it, you will have a working app on the Stellar testnet — and you will submit it. The cheatsheet gets you a working wallet-and-payment scaffold fast. Once that runs, spend your remaining time bending it toward the idea you picked at the break. Follow the cheatsheet first, then make it yours. If you get stuck, raise your hand — that's what the mentors are here for."
+
+**Remind teams:** the cheatsheet scaffold is the *starting point*, not the deliverable. Their submission is the scaffold shaped toward their chosen idea — even a small twist (a purpose-locked payment, a multi-recipient send, a savings-goal UI) is enough for a strong submission.
 
 **Common early blockers:**
 - Node.js not installed → have the install link ready
@@ -433,50 +449,78 @@ The five-step payment flow on the board:
 
 ---
 
-### Buffer / Extra Credit (1:10 – 1:30)
+### Make It Your Idea + Prep Submission (1:10 – 1:30)
 
-For teams that finish early, suggest these extensions:
+This is where the scaffold becomes a submittable project. By now teams should have the wallet + payment flow working — now spend the time making it match the idea picked at the break.
+
+**Shape the scaffold toward the chosen idea.** Most ideas are a small twist on the payment flow. Suggestions by difficulty:
 
 **Easy (10 min each)**
 - Add transaction history (Horizon `/accounts/{id}/payments`)
 - Add a QR code display for the receive address (`qrcode.react` package)
 - Add copy-to-clipboard for the wallet address
+- Re-theme the UI and copy around the chosen idea (e.g. "Send money home", "Pay your sari-sari supplier")
 
 **Medium (20–30 min)**
 - Add USDC trustline creation
 - Show USD equivalent of XLM balance using Reflector oracle price feed
+- Multi-recipient payment (split a send across addresses)
+- Purpose-locked / memo-tagged payment
 
 **Stretch (if very fast)**
 - Swap XLM → USDC via Soroswap
 - Add path payment with automatic conversion
+- Claimable balance with a time predicate
+
+**Last 5 minutes — prep the submission.** Each team should, before Block 3:
+- [ ] Push their code to a public GitHub repo
+- [ ] Write a short README (project name, the idea, how Stellar is used, how to run it) — template in `SUBMISSION_GUIDELINES.md`
+- [ ] Have their track picked and their core flow working on testnet
+
+Mentors: circulate in the last 5 minutes specifically to check submission-readiness, not code.
 
 ---
 
-## Block 3: Demo and Reflect — 15 Minutes
+## Block 3: Demo and Submit — 15 Minutes
 
-### Team Demos (8 min)
+### Team Demos (6 min)
 
 Each team: 60 seconds, no slides needed.
 
 Facilitator asks:
-> "Show us: connect wallet, see balance, send a payment. That's it. Just demo the flow."
+> "Show us your core flow working on testnet — and tell us which idea and track you built for."
 
 If a team didn't finish:
-> "Show us what you built and what you got stuck on."
+> "Show us what you built and what you got stuck on." — they still submit what they have.
 
-No shame in not finishing — the learning is real either way.
+No shame in not finishing — the learning is real either way, and a partial submission still counts.
 
 ---
 
-### Group Reflect (5 min)
+### Submit (5 min)
+
+This is the step that closes the workshop. Walk the room through it live.
+
+Facilitator:
+> "Open `SUBMISSION_GUIDELINES.md`. Every team: open a GitHub Issue on the workshop repo using the submission template. Paste your repo link, your track, your demo flow. Whatever you built is what you submit — submit it now, before you leave."
+
+- [ ] Each team opens a submission Issue (template in `SUBMISSION_GUIDELINES.md`)
+- [ ] Each team has its public repo link, chosen track, and a one-line description ready
+- [ ] Mentors confirm every team has submitted before moving on
+- [ ] Submissions are scored against `JUDGING.md` — point teams to the rubric so they know what mattered
+
+Teams continuing into the full hackathon: point them to `HACKATHON.md`.
+
+---
+
+### Group Reflect (2 min)
 
 Ask the room:
 
 1. "What surprised you most about building on Stellar?"
 2. "What gotcha cost you the most time?"
-3. "What would you want to build next if you had a full weekend?"
 
-Write the answers on the board. This is useful for future workshops and helps participants crystallize what they learned.
+Write the answers on the board. Useful for future workshops and helps participants crystallize what they learned.
 
 ---
 
@@ -570,8 +614,8 @@ Mention these before participants hit them:
 
 ### For a 2-hour format
 - Cut Module 1.4 (Product Patterns) to 5 min overview only
-- Remove extra credit from build block
-- Remove team demos — just do group reflect
+- Cut the "Make It Your Idea" buffer — teams submit the cheatsheet scaffold themed to their idea
+- Shorten demos to 30 seconds per team, but **keep the submission step** — the workshop still ends in a submission
 
 ### For a 4-hour format
 - Add a 30-min "Soroban basics" module after 1.3
@@ -591,4 +635,4 @@ Mention these before participants hit them:
 
 ---
 
-*Built for StellarX Philippines. Refs: `Starter_prompts.md`, `dev_setup`, `Claude_code_Guide.md`, `Resources`*
+*Built for StellarX Philippines. Refs: `stellar-fullstack-cheatsheet.md`, `stellar-300-ideas.md`, `TRACKS.md`, `SUBMISSION_GUIDELINES.md`, `JUDGING.md`, `Starter_prompts.md`, `dev_setup`*

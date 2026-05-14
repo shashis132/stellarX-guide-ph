@@ -3,6 +3,8 @@
 > Build a working Stellar payment app from zero to demo-ready in 90 minutes. Every step is timed. Follow in order. Skip nothing in the first pass.
 >
 > **You do not need to be an expert.** If you can copy, paste, and run a command, you can finish this. Every step has the exact code you need. If you get stuck, use AI (see below) — that is the intended way to do this.
+>
+> **This is your scaffold, not your final answer.** In the workshop you pick an idea from [`stellar-300-ideas.md`](./stellar-300-ideas.md) and a track from [`TRACKS.md`](./TRACKS.md). This cheatsheet gets you a running wallet-and-payment app fast — then you bend it toward your idea and submit what you build per [`SUBMISSION_GUIDELINES.md`](./SUBMISSION_GUIDELINES.md). Whatever you have at the end of the build block is what you submit.
 
 ---
 
@@ -33,6 +35,8 @@ Use an AI coding assistant to do the typing and fix errors for you. This is the 
 | A free AI setup (no paid subscription) | `Free_AI_Setup.md` |
 | Testnet addresses, gotchas, deeper setup | `dev_setup` |
 | 300 ideas for what to actually build | `stellar-300-ideas.md` |
+| Which track your idea fits | `TRACKS.md` |
+| How to submit what you build | `SUBMISSION_GUIDELINES.md` |
 
 **Tip:** Ask the AI to read `dev_setup` and `Starter_prompts.md` from this repo first — it will then know all the Stellar gotchas before it writes a line.
 
