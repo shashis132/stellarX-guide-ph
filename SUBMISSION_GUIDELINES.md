@@ -10,9 +10,8 @@ Everything you need to submit a project, in one place. Read this fully before th
 
 1. Build your project on **Stellar testnet** (or mainnet).
 2. Put **all your code** in a **public GitHub repo** with a complete **README**.
-3. Record a **2–4 minute demo video**.
-4. Open a **GitHub Issue on this repo** using the submission template below.
-5. Submit **before `[ORGANIZER: deadline date + time + timezone]`**.
+3. Open a **GitHub Issue on this repo** using the submission template below.
+4. Submit **before `[ORGANIZER: deadline date + time + timezone]`**.
 
 ---
 
@@ -31,7 +30,7 @@ Everything you need to submit a project, in one place. Read this fully before th
 
 ## What You Must Submit
 
-Your submission has **four parts**. All four are required — missing any one may disqualify the project.
+Your submission has **three parts**. All three are required — missing any one may disqualify the project.
 
 ### 1. A public GitHub repository
 - Contains **all of your project's code** — not just a forked template.
@@ -48,16 +47,8 @@ Your project's README **must** include — see the [README Template](#project-re
 - **Setup and run instructions** — a judge must be able to run it from the README alone
 - Network details — testnet/mainnet, RPC URL, any contract IDs or asset issuers
 - Team members (names + GitHub usernames)
-- Link to the demo video
 
-### 3. A demo video (2–4 minutes)
-- Walks through the **core user flow** actually working.
-- Shows the project running on testnet/mainnet — real transactions, not mockups.
-- A quick tour of the codebase is welcome but optional.
-- Hosted anywhere judges can watch it: YouTube (unlisted is fine), Loom, Google Drive, etc.
-- Keep it focused — show the product working, skip the long intro.
-
-### 4. The submission Issue on this repo
+### 3. The submission Issue on this repo
 Open a GitHub Issue using the [Submission Issue Template](#submission-issue-template) below.
 
 ---
@@ -98,9 +89,6 @@ Copy everything in the block below into your GitHub Issue and fill it in.
 
 ## GitHub Repository
 [Link to your public repo. Final code must be on the `main` branch.]
-
-## Demo Video
-[Link to your 2-4 minute demo video]
 
 ## Network & Deployment
 - Network: [testnet / mainnet]
@@ -169,9 +157,6 @@ npm run dev
 - Contract IDs: [if any]
 - Asset issuers: [if any]
 
-## Demo Video
-[Link]
-
 ## Team
 - [Name] — @[github-username]
 - ...
@@ -215,7 +200,6 @@ Before you open your submission Issue, confirm:
 - [ ] The project **actually runs** on Stellar testnet (or mainnet)
 - [ ] The **core user flow works end to end** — you tested it
 - [ ] Transactions are handled correctly — Soroban txs simulated, finality polled (see [`dev_setup`](./dev_setup))
-- [ ] **Demo video** recorded (2–4 min), shows the core flow working, link is public
 - [ ] **Track** selected
 - [ ] All **team members** listed with GitHub usernames
 - [ ] Stellar is **core** to the product — re-read criterion 1 in [`JUDGING.md`](./JUDGING.md)
